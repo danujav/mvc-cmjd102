@@ -9,6 +9,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
 import javafx.scene.control.TextField;
+import lk.ijse.mvc.dto.CustomerDTO;
 import lk.ijse.mvc.model.CustomerModel;
 
 import java.sql.SQLException;
@@ -45,8 +46,10 @@ public class CustomerFormController {
         String address = txtAddress.getText();
         String tel = txtTel.getText();
 
+        var dto = new CustomerDTO(id, name, address, tel);
+
         try {
-            boolean isSaved = CustomerModel.saveCustomer(id, name, address, tel);
+            boolean isSaved = CustomerModel.saveCustomer(dto);
 
             if(isSaved) {
                 new Alert(Alert.AlertType.CONFIRMATION,  "customer saved!!").show();

@@ -28,7 +28,14 @@ public class CustomerFormController {
 
     @FXML
     void btnClearOnAction(ActionEvent event) {
+        clearFields();
+    }
 
+    private void clearFields() {
+        txtId.setText("");
+        txtName.setText("");
+        txtAddress.setText("");
+        txtTel.setText("");
     }
 
     @FXML

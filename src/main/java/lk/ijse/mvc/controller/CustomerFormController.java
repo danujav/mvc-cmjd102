@@ -29,6 +29,11 @@ public class CustomerFormController {
 
     @FXML
     void btnSaveOnAction(ActionEvent event) {
+        String id = txtId.getText();
+        String name = txtName.getText();
+        String address = txtAddress.getText();
+        String tel = txtTel.getText();
+
 
     }
 }

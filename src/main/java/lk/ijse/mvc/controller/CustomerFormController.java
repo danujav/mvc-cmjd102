@@ -53,10 +53,32 @@ public class CustomerFormController {
 
             if(isSaved) {
                 new Alert(Alert.AlertType.CONFIRMATION,  "customer saved!!").show();
+                clearFields();
             }
         } catch (SQLException e) {
             new Alert(Alert.AlertType.ERROR,  e.getMessage()).show();
         }
 
+    }
+
+    @FXML
+    void btnUpdateOnAction(ActionEvent event) {
+        String id = txtId.getText();
+        String name = txtName.getText();
+        String address = txtAddress.getText();
+        String tel = txtTel.getText();
+
+        var dto = new CustomerDTO(id, name, address, tel);
+
+        try {
+            boolean isUpdated = CustomerModel.updateCustomer(dto);
+
+            if(isUpdated) {
+                new Alert(Alert.AlertType.CONFIRMATION, "customer updated!!!").show();
+                clearFields();
+            }
+        } catch (SQLException e) {
+            new Alert(Alert.AlertType.ERROR, e.getMessage()).show();
+        }
     }
 }

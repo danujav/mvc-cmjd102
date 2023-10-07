@@ -27,7 +27,15 @@
             <Font name="System Bold" size="16.0" />
          </font>
       </Button>
-      <Button layoutX="354.0" layoutY="265.0" mnemonicParsing="false" onAction="#btnClearOnAction" prefHeight="36.0" prefWidth="89.0" style="-fx-background-color: lightyellow;" text="Clear">
+      <Button layoutX="279.0" layoutY="265.0" mnemonicParsing="false" onAction="#btnClearOnAction" prefHeight="36.0" prefWidth="89.0" style="-fx-background-color: lightyellow;" text="Clear">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Button>
+      <Button layoutX="375.0" layoutY="265.0" mnemonicParsing="false" onAction="#btnUpdateOnAction" prefHeight="36.0" prefWidth="89.0" style="-fx-background-color: #f39c12;" text="Update">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>

@@ -1,0 +1,1 @@
+![MVC diagram](src/main/resources/img/mvc.png)
